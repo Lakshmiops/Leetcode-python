@@ -1,0 +1,11 @@
+class Solution:
+    def detectCapitalUse(self, word: str) -> bool:
+        if word==word.upper():
+            return True
+        if word==word.lower():
+            return True
+        first_letter=word[0]
+        restof_letter=word[1:]
+        if first_letter==first_letter.upper() and restof_letter==restof_letter.lower():
+            return True
+        return False
