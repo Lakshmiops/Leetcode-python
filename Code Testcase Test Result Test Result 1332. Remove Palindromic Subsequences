@@ -1,0 +1,7 @@
+class Solution:
+    def removePalindromeSub(self, s: str) -> int:
+        t=s[::-1]
+        if t==s:
+            return 1
+        return 2
+        
