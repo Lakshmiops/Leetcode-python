@@ -1,0 +1,17 @@
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        sMap,tMap={},{}
+        for i in range(len(s)):
+            cS=s[i]
+            tS=t[i]
+            if cS in sMap:
+                if sMap[cS]!=tS:
+                    return False
+            else:
+                sMap[cS]=tS
+            if tS in tMap:
+                if tMap[tS]!=cS:
+                    return False
+            else:
+                tMap[tS]=cS
+        return True
