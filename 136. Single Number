@@ -1,0 +1,6 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        num_count=Counter(nums)
+        for i in num_count:
+            if num_count[i]==1:
+                return i
