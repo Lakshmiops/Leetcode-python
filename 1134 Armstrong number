@@ -1,0 +1,9 @@
+class Solution:
+    def isArmstrong(self, x: int) -> bool:
+        temp=x
+        num_len=len(str(x))
+        num_sum=0
+        while x>0:
+            x,pop=divmod(x,10)
+            num_sum+=pop**num_len
+        return num_sum==temp
