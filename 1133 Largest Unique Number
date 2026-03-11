@@ -1,0 +1,8 @@
+class Solution:
+    def LarUniNum(self,nums):
+        max_uniquenum=0
+        num_count=Counter(nums)
+        for i in num_count:
+            if num_count[i]==1:
+                max_uniquenum=max(max_uniquenum,i)
+        return max_uniquenum
