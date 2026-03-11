@@ -1,0 +1,11 @@
+class Solution(object):
+    def add(self,s):
+        res = []
+        for i in range(len(s)):
+            if s[i] in res:
+                res.remove(s[i])
+            else:
+                res.append(s[i])
+        if len(res)<=1:
+            return True
+        return False
