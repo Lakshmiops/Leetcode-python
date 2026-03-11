@@ -1,0 +1,12 @@
+class Solution:
+    def commonChars(self, words: List[str]) -> List[str]:
+        word_count=Counter(words[0])
+        result=[]
+        for word in range(1,len(words)):
+            ind_count=Counter(words[word])
+            for ch in word_count:
+                word_count[ch]=min(word_count[ch],ind_count[ch])
+        for i in word_count:
+            for ch in range(word_count[i]):
+                result.append(i)
+        return result
