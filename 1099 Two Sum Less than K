@@ -1,0 +1,13 @@
+class Solution(object):
+    def add(self,A,k):
+        max_sum=0
+        A.sort()
+        left,right=0,len(A)-1
+        while left<=right:
+            two_sum=A[left]+A[right]
+            if two_sum<k:
+                max_sum=max(max_sum,two_sum)
+                left+=1
+            else:
+                right-=1
+        return max_sum
