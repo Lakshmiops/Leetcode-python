@@ -1,0 +1,8 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        temp=x
+        sum=0
+        while x>0:
+            x,pop=divmod(x,10)
+            sum=(sum*10)+pop
+        return sum==temp
