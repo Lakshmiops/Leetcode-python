@@ -1,0 +1,19 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        aPointer=len(a)-1
+        bPointer=len(b)-1
+        carry=0
+        result=[]
+        while aPointer>=0 or bPointer>=0:
+            sum=carry
+            if aPointer>=0:
+                sum+=int(a[aPointer])
+            if bPointer>=0:
+                sum+=int(b[bPointer])
+            result.append(str(sum%2))
+            carry=sum//2
+            aPointer-=1
+            bPointer-=1
+        if carry>0:
+            result.append(str(carry))
+        return ''.join(reversed(result))
