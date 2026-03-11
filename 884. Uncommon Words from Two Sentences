@@ -1,0 +1,12 @@
+class Solution:
+    def uncommonFromSentences(self, s1: str, s2: str) -> List[str]:
+        dict={}
+        res=[]
+        for ss1 in s1.split():
+            dict[ss1]=dict.get(ss1,0)+1
+        for ss2 in s2.split():
+            dict[ss2]=dict.get(ss2,0)+1
+        for i in dict:
+            if dict[i]==1:
+                res.append(i)
+        return res
